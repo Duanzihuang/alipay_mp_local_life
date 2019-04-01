@@ -1,0 +1,34 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/message/message",
+    "pages/mine/mine"
+  ],
+  "window": {
+    "defaultTitle": "本地生活"
+  },
+  "tabBar": {
+    "backgroundColor": "#ffffff",
+    "selectedColor": "#ee523d",
+    "items": [
+      {
+        "pagePath": "pages/home/home",
+        "name": "首页",
+        "icon": "/assets/home.png",
+        "activeIcon": "/assets/home-active.png"
+      },
+      {
+        "pagePath": "pages/message/message",
+        "name": "消息",
+        "icon": "/assets/message.png",
+        "activeIcon": "/assets/message-active.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "name": "我的",
+        "icon": "/assets/profile.png",
+        "activeIcon": "/assets/profile-active.png"
+      }
+    ]
+  }
+}
