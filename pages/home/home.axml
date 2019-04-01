@@ -1,3 +1,32 @@
 <view>
-  我是首页
+  <!-- 1.0 轮播图 -->
+  <swiper autoplay indicator-dots circular>
+    <block a:for="{{slides}}" a:key="{{item.id}}">
+      <swiper-item>
+        <image src="{{item.image}}">
+        </image>
+      </swiper-item>
+    </block>
+  </swiper>
+  <!-- 2.0 九宫格视图 -->
+  <view class="weui-grids">
+    <block a:for="{{categories}}" a:key="{{item.id}}">
+      <!-- <navigator url="/pages/list/list?cate_id={{item.id}}&name={{item.name}}" class="weui-grid" hover-class="weui-grid_active"> -->
+      <view onTap="categoryTap" data-id="{{item.id}}" data-name="{{item.name}}" class="weui-grid" hover-class="weui-grid_active">
+        <image class="weui-grid__icon" src="{{item.icon}}" />
+        <view class="weui-grid__label">
+          <text>{{item.name}}                                                                                                    
+          </text>
+        </view>
+      </view>
+      <!-- </navigator> -->
+    </block>
+  </view>
+  <!-- 3.0 其它 -->
+  <view class="friends">
+    <image class="left" src="/assets/link-01.png">
+    </image>
+    <image class="right" src="/assets/link-02.png">
+    </image>
+  </view>
 </view>

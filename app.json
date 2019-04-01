@@ -2,7 +2,9 @@
   "pages": [
     "pages/home/home",
     "pages/message/message",
-    "pages/mine/mine"
+    "pages/mine/mine",
+    "pages/list/list",
+    "pages/list/list"
   ],
   "window": {
     "defaultTitle": "本地生活"

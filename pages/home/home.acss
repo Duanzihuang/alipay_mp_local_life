@@ -1,0 +1,60 @@
+@import "./grid.acss";
+swiper {
+  width: 750rpx;
+  height: 400rpx
+}
+
+swiper image {
+  width: 750rpx;
+  height: 400rpx
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  /* border-top: 1px solid rgba(92,92,92,0.3); */
+  /* border-left: 1px solid rgba(92,92,92,0.3); */
+}
+
+.grid-item {
+  height: 200rpx;
+  width: 33.33333%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid #f0f0f0;
+  border-bottom: 1px solid #f0f0f0;
+  box-sizing: border-box;
+}
+
+.grid-item image {
+  height: 70rpx;
+  width: 70rpx;
+}
+
+.grid-item text {
+  margin-top: 15rpx;
+  font-size: 14px;
+}
+
+.friends {
+  margin-top: 20rpx;
+  background-color: #ffffff;
+  overflow: hidden;
+  padding: 20rpx 30rpx;
+}
+
+.friends image {
+  width: 330rpx;
+  height: 185rpx;
+}
+
+.friends .left {
+  float: left;
+}
+
+.friends .right {
+  float: right;
+}
