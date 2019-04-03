@@ -1,3 +1,36 @@
 <view>
-  列表页面
+  <!-- 1 搜索部分 -->
+  <include src="./search_bar.axml"/>
+  <!-- 2 列表部分 -->
+  <block a:for="{{list}}" a:key="item.id">
+    <!-- 遍历生成的每一行 -->
+    <navigator class="cell" url="/pages/detail/detail?id={{item.id}}">
+      <!-- 左边的图片 -->
+      <view class="imageView">
+        <image src="{{item.images[0]}}">
+        </image>
+      </view>
+      <!-- 中间的文字描述 -->
+      <view class="meta">
+        <text class="name">{{item.name}}                                                
+        </text>
+        <text class="phone">电话:{{item.phone}}                                                
+        </text>
+        <text class="address">地址:{{item.address}}                                                
+        </text>
+        <text class="time">营业时间:{{item.businessHours}}                                                
+        </text>
+      </view>
+      <!-- 右边的分数 -->
+      <view class="score">
+        <text>{{item.score}}                                                
+        </text>
+      </view>
+    </navigator>
+  </block>
+  <!-- 3 加载提示部分 -->
+  <!-- 3.0 上拉加载时候的提示 -->
+  <view class="loadMore loading" a:if="{{hasMore}}">正在加载中...              
+  </view>
+  <view class="loadMore" a:else>没有更多了</view>
 </view>

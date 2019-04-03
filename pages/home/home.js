@@ -30,7 +30,7 @@ Page({
     const name = e.currentTarget.dataset.name
 
     my.navigateTo({
-      url: `/pages/list/list?id=${id}&name=${name}`
+      url: `/pages/list/list?cate_id=${id}&name=${name}`
     });
   }
 });
