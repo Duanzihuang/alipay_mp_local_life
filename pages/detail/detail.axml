@@ -1,0 +1,33 @@
+<!--pages/detail/detail.wxml-->
+<import-sjs name="m1" from="../../utils/replaceURL.sjs"/>
+<view>
+  <!-- 1.0 轮播图 -->
+  <swiper autoplay indicator-dots circular>
+    <block a:for="{{shop.images}}" a:key="*this">
+      <swiper-item>
+        <image data-index="{{index}}" onTap="preview" src="{{item}}"></image>
+      </swiper-item>
+    </block> 
+  </swiper>
+  <!-- 2.0 描述 -->
+  <view class="decription">
+    <text class="name">{{shop.name}}</text>
+    <text>电话：{{shop.phone}}</text>
+    <text>地址：{{shop.address}}</text>
+    <text>营业时间：{{shop.businessHours}}</text>
+    <view class="score">{{shop.score}}</view>
+  </view>
+
+  <!-- 3.0 评价列表 -->
+  <view a:key="*this" class="comment" a:for="{{shop.comments}}">
+    <text class="name">{{item.name}}</text>
+    <text class="date">{{item.date}}</text>
+    <text class="rating">{{item.rating}}</text>
+    <text>{{item.content}}</text>
+    <view class="images">
+      <block a:for-item="subitem" a:for="{{item.images}}" a:key="*this">
+        <image src="{{m1.replaceURL(subitem)}}"></image>
+      </block>
+    </view>
+  </view>
+</view>

@@ -4,7 +4,7 @@
     "pages/message/message",
     "pages/mine/mine",
     "pages/list/list",
-    "pages/list/list"
+    "pages/detail/detail"
   ],
   "window": {
     "defaultTitle": "本地生活"
