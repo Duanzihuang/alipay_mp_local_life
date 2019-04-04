@@ -17,6 +17,7 @@ Page({
   // 预览
   preview(e) {
     my.previewImage({
+      // #不一样
       current: e.currentTarget.dataset.index,
       urls: this.data.shop.images
     })

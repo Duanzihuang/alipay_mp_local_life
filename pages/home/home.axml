@@ -12,6 +12,7 @@
   <view class="weui-grids">
     <block a:for="{{categories}}" a:key="{{item.id}}">
       <!-- <navigator url="/pages/list/list?cate_id={{item.id}}&name={{item.name}}" class="weui-grid" hover-class="weui-grid_active"> -->
+      <!-- #不一样 -->
       <view onTap="categoryTap" data-id="{{item.id}}" data-name="{{item.name}}" class="weui-grid" hover-class="weui-grid_active">
         <image class="weui-grid__icon" src="{{item.icon}}" />
         <view class="weui-grid__label">

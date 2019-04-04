@@ -113,21 +113,7 @@ Page({
       this.loadData()
     })
   },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-    // 重置
-    this.data.page = 0
-    this.setData({
-      hasMore: true,
-      list: []
-    }, () => {
-      this.loadData()
-    })
-  },
-
+  
   /**
    * 页面上拉触底事件的处理函数
    */
